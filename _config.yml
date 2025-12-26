@@ -1,0 +1,7 @@
+title: Research Archive
+description: A collection of academic papers for research and citation.
+url: "https://researcharchive.github.io"
+baseurl: "/"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

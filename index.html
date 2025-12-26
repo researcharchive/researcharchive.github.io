@@ -1,0 +1,35 @@
+---
+layout: default
+title: Academic Research Archive
+---
+
+<h1>Academic Research Archive</h1>
+<p>This archive contains a collection of academic papers available for indexing by Google Scholar and other academic search engines. Each paper includes structured metadata for proper citation and discovery.</p>
+
+{% for paper in site.data.papers %}
+<div class="paper">
+    <h2>{{ paper.title }}</h2>
+    <p><strong>Authors:</strong> {{ paper.authors | join: ", " }}</p>
+    <p><strong>Publication Date:</strong> {{ paper.date }}</p>
+    <p><strong>Venue:</strong> {{ paper.venue }}</p>
+    <p><strong>Abstract:</strong> {{ paper.abstract }}</p>
+    <a href="{{ site.baseurl }}/papers/{{ paper.pdf | remove: '.pdf' }}.html">View Abstract</a>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "{{ paper.title }}",
+        "author": [
+            {% for author in paper.authors %}
+            {"@type": "Person", "name": "{{ author }}"}{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ],
+        "datePublished": "{{ paper.date }}",
+        "description": "{{ paper.abstract }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/papers/{{ paper.pdf | remove: '.pdf' }}.html",
+        "publisher": {"@type": "Organization", "name": "Research Archive"},
+        "isPartOf": {"@type": "PublicationIssue", "name": "{{ paper.venue }}"}
+    }
+    </script>
+</div>
+{% endfor %}

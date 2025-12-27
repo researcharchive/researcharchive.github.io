@@ -8,8 +8,8 @@ on:
     branches:
       - main
     paths:
-      - 'pdfs/**'
-      - '_data/**'
+      - '_data/papers.json'
+      - 'bibs/**'
 
 jobs:
   update-papers:
@@ -33,7 +33,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add papers/
+          git add -A papers/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

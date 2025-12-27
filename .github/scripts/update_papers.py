@@ -175,6 +175,20 @@ def main():
     else:
         papers = []
 
+    # Get current base names
+    current_base_names = set()
+    for paper in papers:
+        base_name = Path(paper['pdf']).stem
+        current_base_names.add(base_name)
+
+    # Ensure papers directory exists
+    papers_dir.mkdir(exist_ok=True)
+
+    # Remove old HTML files
+    for html_file in papers_dir.glob('*.html'):
+        if html_file.stem not in current_base_names:
+            html_file.unlink()
+
     # Generate HTML pages
     for paper in papers:
         base_name = Path(paper['pdf']).stem

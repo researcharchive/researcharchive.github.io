@@ -12,7 +12,6 @@ title: Academic Research Archive
     <p><strong>Authors:</strong> {{ paper.authors | join: ", " }}</p>
     <p><strong>Publication Date:</strong> {{ paper.date }}</p>
     <p><strong>Venue:</strong> {{ paper.venue }}</p>
-    <p><strong>Abstract:</strong> {{ paper.abstract }}</p>
     <a href="{{ site.baseurl }}/papers/{{ paper.pdf | remove: '.pdf' }}.html">View Abstract</a>
     <script type="application/ld+json">
     {

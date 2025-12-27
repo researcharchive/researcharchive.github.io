@@ -32,7 +32,10 @@ researcharchive.github.io/
 1. **Add PDF File**:
    - Save your PDF as `filename.pdf` in the `pdfs/` folder.
 
-2. **Configure Metadata**:
+2. **Add BibTeX Reference (Optional)**:
+   - If you want to provide a BibTeX reference on the paper's page, create a file named `filename.bib` in the `bibs/` folder with the BibTeX entry.
+
+3. **Configure Metadata**:
    - Edit `_data/papers.json` and add a new entry. Ensure the `"pdf"` field matches the filename exactly.
 
      ```json
@@ -50,11 +53,11 @@ researcharchive.github.io/
      }
      ```
 
-3. **Commit and Push**:
-   - Commit both the PDF and the updated `papers.json`.
+4. **Commit and Push**:
+   - Commit the PDF, bib file (if any), and the updated `papers.json`.
    - Push to the `main` branch.
 
-4. **Automatic HTML Generation**:
+5. **Automatic HTML Generation**:
    - GitHub Actions will detect the changes and generate `papers/filename.html` with meta tags.
    - The main page will automatically list the new paper.
 
@@ -85,6 +88,27 @@ Ensure metadata is complete and PDFs meet Scholar requirements. Test locally if 
 
 ## Deployment
 
+### Local Testing
+To test the site locally before pushing to GitHub Pages:
+
+1. **Install Dependencies**:
+   - Ensure Ruby is installed (version 2.5 or higher).
+   - Install Bundler: `gem install bundler`
+
+2. **Clone and Setup**:
+   - Clone the repository: `git clone https://github.com/yourusername/researcharchive.github.io.git`
+   - Navigate to the directory: `cd researcharchive.github.io`
+   - Install gems: `bundle install`
+
+3. **Serve Locally**:
+   - Run the Jekyll server: `bundle exec jekyll serve`
+   - Open your browser to `http://localhost:4000` to view the site.
+
+4. **Test Changes**:
+   - Make edits to files, then refresh the browser.
+   - For paper pages, run the update script manually if needed: `python .github/scripts/update_papers.py`
+
+### GitHub Pages Deployment
 - Hosted on GitHub Pages at `https://researcharchive.github.io`.
 - Automatic builds on pushes to `main`.
 - Site updates within minutes after push.

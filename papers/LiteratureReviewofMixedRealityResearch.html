@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Literature Review of Mixed Reality Research</title>
   
   <meta name="citation_title" content="Literature Review of Mixed Reality Research">
@@ -10,6 +11,81 @@
 
   <meta name="citation_pdf_url" content="https://researcharchive.github.io/pdfs/LiteratureReviewofMixedRealityResearch.pdf">
 
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #34495e;
+    }
+    h3 {
+      color: #3498db;
+      margin-top: 30px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
+    .bib-block {
+      background-color: #ecf0f1;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .bib-content {
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      margin: 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .copy-btn:hover {
+      background-color: #c0392b;
+    }
+    .copy-hint {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      background-color: #27ae60;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+  </style>
 </head>
 <body>
   <h1>Literature Review of Mixed Reality Research</h1>
@@ -19,8 +95,31 @@
     In the global context, while mixed reality has been an emerging concept for years, recent technological and scientific advancements have now made it poised to revolutionize industries and daily life by offering enhanced functionalities and improved services. Besides reviewing the highly cited papers in the last 20 years among over a thousand research papers on mixed reality, this systematic review provides the state-of-the-art applications and utilities of the mixed reality by primarily scrutinizing the associated papers in 2022 and 2023. Focusing on the potentials that this technology have in providing digitally supported simulations and other utilities in the era of large language models, highlighting the potential and limitations of the innovative solutions and also bringing focus to emerging research directions, such as telemedicine, remote control and optimization of direct volume rendering. The paper's associated repository is publicly accessible at https://aizierjiang.github.io/mr.
   </p>
   
-  <p>
-    <a href="../pdfs/LiteratureReviewofMixedRealityResearch.pdf">Download Full PDF</a>
-  </p>
+  <a href="../pdfs/LiteratureReviewofMixedRealityResearch.pdf" class="download-btn">Download Full PDF</a>
+
+  <h3>Bibliographic Reference</h3>
+  <div class="bib-block">
+    <button class="copy-btn" onclick="copyBib()">Copy</button>
+    <div class="copy-hint" id="copyHint">Copied successfully!</div>
+    <pre class="bib-content">@article{aiersilan2023literature,
+  title={Literature review of mixed reality research},
+  author={Aiersilan, Aizierjiang},
+  journal={arXiv preprint arXiv:2312.02995},
+  year={2023}
+}</pre>
+  </div>
+
+  <script>
+    function copyBib() {
+      const bibText = document.querySelector('.bib-content').textContent;
+      navigator.clipboard.writeText(bibText).then(() => {
+        const hint = document.getElementById('copyHint');
+        hint.style.display = 'block';
+        setTimeout(() => {
+          hint.style.display = 'none';
+        }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>

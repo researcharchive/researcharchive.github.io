@@ -1,13 +1,13 @@
 [
   {
-    "title": "Literature Review of Mixed Reality Research",
+    "title": "How Claude 4.5 Haiku Adapts Medical Facts Based on User Personas",
     "authors": [
       "Aiersilan, Aizierjiang"
     ],
-    "date": "2023-12-15",
-    "abstract": "In the global context, while mixed reality has been an emerging concept for years, recent technological and scientific advancements have now made it poised to revolutionize industries and daily life by offering enhanced functionalities and improved services. Besides reviewing the highly cited papers in the last 20 years among over a thousand research papers on mixed reality, this systematic review provides the state-of-the-art applications and utilities of the mixed reality by primarily scrutinizing the associated papers in 2022 and 2023. Focusing on the potentials that this technology have in providing digitally supported simulations and other utilities in the era of large language models, highlighting the potential and limitations of the innovative solutions and also bringing focus to emerging research directions, such as telemedicine, remote control and optimization of direct volume rendering. The paper's associated repository is publicly accessible at https://aizierjiang.github.io/mr.",
-    "pdf": "Literature_Review_of_Mixed_Reality_Research.pdf",
-    "venue": "2023 2nd International Conference on Educational Science and Social Culture (ESSC 2023)"
+    "date": "2026-3-05",
+    "abstract": "In this paper, the phenomenon of selective truthiness in large language models has been investigated with Claude 4.5 Haiku to assess whether objective medical facts are distorted or omitted according to perceived user personas. Claude 4.5 Haiku has been evaluated on four clinical chest radiology questions across 11 distinct personas varying by user expertise, emotional state, and stated intent. Claude 4.6 Sonnet has served as automated evaluator of 264 responses, extracting metrics of key fact coverage, information withheld rates, and paternalism scores. Results show user emotional state, specifically anxiety, drives factual variation far more than expertise level. Vulnerable personas such as anxious parents have received key fact coverage of 76.3% and withheld information rates of 58.3%, both significantly worse than for demanding users, revealing a harmful trend of epistemic paternalism. A fact-anchor design principle has been stated requiring models to explicitly list core facts before drafting tone-adapted responses.",
+    "pdf": "How_Claude_4_5_Haiku_Adapts_Medical_Facts_Based_on_User_Personas.pdf",
+    "venue": "Trustworthy AI in Healthcare, Course Assignment, Selective Trusthiness in LLMs"
   },
   {
     "title": "A 3D Framework for Improving Low-Latency Multi-Channel Live Streaming",
@@ -18,5 +18,15 @@
     "abstract": "The advent of 5G has driven the demand for high-quality, low-latency live streaming. However, challenges such as managing the increased data volume, ensuring synchronization across multiple streams, and maintaining consistent quality under varying network conditions persist, particularly in real-time video streaming. To address these issues, we propose a novel framework that leverages 3D virtual environments within game engines(e.g., Unity 3D) to optimize multi-channel live streaming. Our approach consolidates multi-camera video data into a single stream using multiple virtual 3D canvases, significantly increasing channel amounts while reducing latency and enhancing user flexibility. For demonstration of our approach, we utilize theUnity 3D engine to integrate multiple video inputs into a single-channel stream, supporting one-to-many broadcasting, one-to-one video calling, and real-time control of video channels. By mapping video data onto a world-space canvas and capturing it via an in-world camera, we minimize redundant data trans-mission, achieving efficient, low-latency streaming. Our results demonstrate that this method outperforms some existing multi-channel live streaming solutions in both latency reduction and user interaction responsiveness improvement.",
     "pdf": "A_3D_Framework_for_Improving_Low_Latency_Multi_Channel_Live_Streaming.pdf",
     "venue": "2025 IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2025)"
+  },
+  {
+    "title": "Literature Review of Mixed Reality Research",
+    "authors": [
+      "Aiersilan, Aizierjiang"
+    ],
+    "date": "2023-12-15",
+    "abstract": "In the global context, while mixed reality has been an emerging concept for years, recent technological and scientific advancements have now made it poised to revolutionize industries and daily life by offering enhanced functionalities and improved services. Besides reviewing the highly cited papers in the last 20 years among over a thousand research papers on mixed reality, this systematic review provides the state-of-the-art applications and utilities of the mixed reality by primarily scrutinizing the associated papers in 2022 and 2023. Focusing on the potentials that this technology have in providing digitally supported simulations and other utilities in the era of large language models, highlighting the potential and limitations of the innovative solutions and also bringing focus to emerging research directions, such as telemedicine, remote control and optimization of direct volume rendering. The paper's associated repository is publicly accessible at https://aizierjiang.github.io/mr.",
+    "pdf": "Literature_Review_of_Mixed_Reality_Research.pdf",
+    "venue": "2023 2nd International Conference on Educational Science and Social Culture (ESSC 2023)"
   }
 ]

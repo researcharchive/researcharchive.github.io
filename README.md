@@ -1,4 +1,4 @@
-# Academic Research Archive
+# Ezhar Research Archive
 
 This repository hosts a static website for archiving and sharing academic research papers.
 

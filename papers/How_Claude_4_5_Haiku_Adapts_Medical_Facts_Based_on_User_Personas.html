@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How Claude 4.5 Haiku Adapts Medical Facts Based on User Personas</title>
+  
+  <meta name="citation_title" content="How Claude 4.5 Haiku Adapts Medical Facts Based on User Personas">
+  <meta name="citation_author" content="Aizierjiang Aiersilan">
+  <meta name="citation_publication_date" content="2026/02/25">
+  <meta name="citation_journal_title" content="Trustworthy AI in Healthcare (Course Assignment); Selective Truthiness in LLMs">
+
+  <meta name="citation_pdf_url" content="https://researcharchive.github.io/pdfs/How_Claude_4_5_Haiku_Adapts_Medical_Facts_Based_on_User_Personas.pdf">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #34495e;
+    }
+    h3 {
+      color: #3498db;
+      margin-top: 30px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
+    .bib-block {
+      background-color: #ecf0f1;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .bib-content {
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      margin: 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .copy-btn:hover {
+      background-color: #c0392b;
+    }
+    .copy-hint {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      background-color: #27ae60;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>How Claude 4.5 Haiku Adapts Medical Facts Based on User Personas</h1>
+  <h2>Authors: Aizierjiang Aiersilan</h2>
+  <h3>Abstract</h3>
+  <p>
+    In this paper, the phenomenon of selective truthiness in large language models has been investigated with Claude 4.5 Haiku to assess whether objective medical facts are distorted or omitted according to perceived user personas. Claude 4.5 Haiku has been evaluated on four clinical chest radiology questions across 11 distinct personas varying by user expertise, emotional state, and stated intent. Claude 4.6 Sonnet has served as automated evaluator of 264 responses, extracting metrics of key fact coverage, information withheld rates, and paternalism scores. Results show user emotional state, specifically anxiety, drives factual variation far more than expertise level. Vulnerable personas such as anxious parents have received key fact coverage of 76.3% and withheld information rates of 58.3%, both significantly worse than for demanding users, revealing a harmful trend of epistemic paternalism. A fact-anchor design principle has been stated requiring models to explicitly list core facts before drafting tone-adapted responses.
+  </p>
+  
+  <a href="../pdfs/How_Claude_4_5_Haiku_Adapts_Medical_Facts_Based_on_User_Personas.pdf" class="download-btn">Download Full PDF</a>
+
+  <h3>Bibliographic Reference</h3>
+  <div class="bib-block">
+    <button class="copy-btn" onclick="copyBib()">Copy</button>
+    <div class="copy-hint" id="copyHint">Copied successfully!</div>
+    <pre class="bib-content">@article{aiersilan2026truthiness,
+  title={How Claude 4.5 Haiku Adapts Medical Facts Based on User Personas},
+  author={Aiersilan, Aizierjiang},
+  journal={arXiv preprint arXiv:PENDING},
+  year={2026}
+}</pre>
+  </div>
+
+  <script>
+    function copyBib() {
+      const bibText = document.querySelector('.bib-content').textContent;
+      navigator.clipboard.writeText(bibText).then(() => {
+        const hint = document.getElementById('copyHint');
+        hint.style.display = 'block';
+        setTimeout(() => {
+          hint.style.display = 'none';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

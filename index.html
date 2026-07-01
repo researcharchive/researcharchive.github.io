@@ -6,7 +6,8 @@ title: Ezhar Research Archive
 <h1>Ezhar Research Archive</h1>
 <p>This archive serves as a repository for storing and sharing research articles, peer-reviewed academic papers, proposals, preprints, and academic tutorial papers.</p>
 
-{% for paper in site.data.papers %}
+{% assign sorted_papers = site.data.papers | sort: "date" | reverse %}
+{% for paper in sorted_papers %}
 <div class="paper">
     <h2>{{ paper.title }}</h2>
     <p><strong>Authors:</strong> {{ paper.authors | join: ", " }}</p>

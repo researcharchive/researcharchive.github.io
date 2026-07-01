@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Review of The AI Revolution in Medicine: GPT-4 and Beyond</title>
+  
+  <meta name="citation_title" content="Review of The AI Revolution in Medicine: GPT-4 and Beyond">
+  <meta name="citation_author" content="Aizierjiang Aiersilan">
+  <meta name="citation_publication_date" content="2026/04/19">
+  <meta name="citation_journal_title" content="Book Review (Available at SSRN 6456520)">
+
+  <meta name="citation_pdf_url" content="https://researcharchive.github.io/pdfs/Review_of_The_AI_Revolution_in_Medicine_GPT-4_and_Beyond.pdf">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #34495e;
+    }
+    h3 {
+      color: #3498db;
+      margin-top: 30px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
+    .bib-block {
+      background-color: #ecf0f1;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .bib-content {
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      margin: 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .copy-btn:hover {
+      background-color: #c0392b;
+    }
+    .copy-hint {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      background-color: #27ae60;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Review of The AI Revolution in Medicine: GPT-4 and Beyond</h1>
+  <h2>Authors: Aizierjiang Aiersilan</h2>
+  <h3>Abstract</h3>
+  <p>
+    This review essay examines The AI Revolution in Medicine: GPT-4 and Beyond by Peter Lee, Carey Goldberg, and Isaac Kohane, an early and optimistic exploration of how general-purpose artificial intelligence might transform healthcare. The book's central thesis is that Large Language Models have evolved beyond simple search engines and predictive-text tools into systems capable of reasoning, empathy, and complex problem-solving, and that they will not replace physicians but form a symbiotic partnership with them. The authors illustrate three core roles for AI in medicine, namely the Torchbearer for diagnostics, the Ultimate Paperwork Shredder for administration, and the Empathic Consultant for patient interaction, through vivid real-time transcripts of GPT-4 interactions, including a complex newborn case in which the model correctly surfaces a rare 11-beta-hydroxylase deficiency. Writing from the perspective of a PhD student specializing in AI and healthcare, this review finds their vision compelling yet argues it requires significant scrutiny regarding implementation, equity, bias, evaluation standards, and safety, drawing on information-policy frameworks such as Lessig's code is law and Spinello's cyberethics, and noting emerging evidence that real-world deployments may be messier than the authors' optimistic projections.
+  </p>
+  
+  <a href="../pdfs/Review_of_The_AI_Revolution_in_Medicine_GPT-4_and_Beyond.pdf" class="download-btn">Download Full PDF</a>
+
+  <h3>Bibliographic Reference</h3>
+  <div class="bib-block">
+    <button class="copy-btn" onclick="copyBib()">Copy</button>
+    <div class="copy-hint" id="copyHint">Copied successfully!</div>
+    <pre class="bib-content">@article{aiersilan2026review,
+  title={Review of The AI Revolution in Medicine: GPT-4 and Beyond},
+  author={Aiersilan, Aizierjiang},
+  journal={Available at SSRN 6456520},
+  year={2026}
+}</pre>
+  </div>
+
+  <script>
+    function copyBib() {
+      const bibText = document.querySelector('.bib-content').textContent;
+      navigator.clipboard.writeText(bibText).then(() => {
+        const hint = document.getElementById('copyHint');
+        hint.style.display = 'block';
+        setTimeout(() => {
+          hint.style.display = 'none';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

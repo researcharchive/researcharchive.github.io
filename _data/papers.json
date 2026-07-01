@@ -1,33 +1,24 @@
 [
   {
-    "title": "Hallucination Is Linearly Decodable from Mid-Layer Hidden States in Quantized LLMs",
-    "authors": [
-      "Aizierjiang Aiersilan"
-    ],
-    "date": "2025-02-11",
-    "abstract": "We investigate whether open-source LLMs encode a linearly separable truthfulness signal in their hidden states, and at which network depth this signal is strongest. Across three 7B-8B instruction-tuned models (Llama-3.1-8B, Mistral-7B, Qwen2.5-7B) loaded in 4-bit NF4 quantization, we extract per-layer hidden states on four hallucination benchmarks (TruthfulQA, HaluEval-QA, FEVER, and a controlled synthetic set) and compare four detection approaches: linear and MLP probes, INSIDE EigenScore, self-consistency, and attention entropy. A linear probe on a single mid-network layer achieves 0.904-1.000 AUROC on held-out splits, while sampling-based detectors do not exceed 0.541 AUROC under the same protocol. The truthfulness signal is approximately linear: MLP probes rarely surpass linear probes by more than 0.01 AUROC. Peak probing layers fall in a consistent band across model families on natural-language benchmarks-blocks 13-18 of 32 for Llama and Mistral, and blocks 19-25 of 28 for Qwen. First-block attention entropy provides a complementary signal in knowledge-grounded settings (0.866-0.941 AUROC on HaluEval-QA) at no additional inference cost. The low discriminability of sampling methods under this protocol reflects a structural mismatch between paired-label evaluation and the information these methods access, rather than an inherent limitation of those methods. Code and data are released for full reproducibility on a single 8 GB GPU.",
-    "pdf": "Hallucination_Is_Linearly_Decodable_from_Mid-Layer_Hidden_States_in_Quantized_LLMs.pdf",
-    "venue": "arXiv preprint arXiv:2606.02628"
-  },
-  {
     "title": "Detecting Verbatim LLM Copy-Paste in Homework",
     "authors": [
       "Aizierjiang Aiersilan"
     ],
     "date": "2026-05-07",
-    "abstract": "Large language models (LLMs) have made fluent essay writing, code drafting, and quiz answering instantly available to students at every level, from secondary school through graduate study. Many educators do not object to LLM use per se; what they need to detect is the case in which a student pastes the assignment prompt into a chatbot and submits the model's reply verbatim, without engaging with the work. Existing post-hoc AI-text detectors remain unreliable and have been shown to penalise non-native English writers, while output-side watermarks require cooperation from the model provider. We propose an alternative that the educator controls directly: an input-side watermark in which an invisible instruction is embedded inside the visible assignment prompt itself. An LLM that ingests the prompt verbatim quietly reads the hidden instruction and writes a tell-tale signature into its reply, exposing the copy-and-paste pathway specifically. We describe SteganoPrompt, a single-page, zero-dependency web tool that encodes an arbitrary printable-ASCII payload into the deprecated Unicode Tags block (U+E0000-U+E007F). The encoded string is visually identical to the original, survives common copy-paste channels (Word, Google Docs, PDF, Markdown, Slack, e-mail, the major learning-management systems), and is reliably tokenized by frontier models. We evaluate compliance across seven LLM families and a representative set of educational content channels. The work is informed by my experience as a graduate teaching assistant for an undergraduate software engineering course at the George Washington University. The tool is released under the MIT licence at https://ezharjan.github.io/SteganoPrompt/.",
+    "abstract": "Large language models (LLMs) have made fluent essay writing, code drafting, and quiz answering instantly available to students at every level, from secondary school through graduate study. Many educators do not object to LLM use per se; what they need to detect is the case in which a student pastes the assignment prompt into a chatbot and submits the model's reply verbatim, without engaging with the work. Existing post-hoc AI-text detectors remain unreliable and have been shown to penalise non-native English writers, while output-side watermarks require cooperation from the model provider. We propose an alternative that the educator controls directly: an input-side watermark in which an invisible instruction is embedded inside the visible assignment prompt itself. An LLM that ingests the prompt verbatim quietly reads the hidden instruction and writes a tell-tale signature into its reply, exposing the copy-and-paste pathway specifically. We describe SteganoPrompt, a single-page, zero-dependency web tool that encodes an arbitrary printable-ASCII payload into the deprecated Unicode Tags block (U+E0000-U+E007F). The encoded string is visually identical to the original, survives common copy-paste channels (Word, Google Docs, PDF, Markdown, Slack, e-mail, the major learning-management systems), and is reliably tokenized by frontier models. We evaluate compliance across seven LLM families and a representative set of educational content channels. The work is informed by my experience as a graduate teaching assistant for an undergraduate software engineering course. The tool is released under the MIT licence at https://ezharjan.github.io/SteganoPrompt/.",
     "pdf": "Detecting_Verbatim_LLM_Copy-Paste_in_Homework.pdf",
     "venue": "arXiv preprint arXiv:2605.16336"
   },
   {
-    "title": "Review of The AI Revolution in Medicine: GPT-4 and Beyond",
+    "title": "Neuro-Oracle: A Trajectory-Aware Agentic RAG Framework for Interpretable Epilepsy Surgical Prognosis",
     "authors": [
-      "Aizierjiang Aiersilan"
+      "Aizierjiang Aiersilan",
+      "Mohamad Koubeissi"
     ],
-    "date": "2026-02-13",
-    "abstract": "This review essay examines The AI Revolution in Medicine: GPT-4 and Beyond by Peter Lee, Carey Goldberg, and Isaac Kohane, an early and optimistic exploration of how general-purpose artificial intelligence might transform healthcare. The book's central thesis is that Large Language Models have evolved beyond simple search engines and predictive-text tools into systems capable of reasoning, empathy, and complex problem-solving, and that they will not replace physicians but form a symbiotic partnership with them. The authors illustrate three core roles for AI in medicine, namely the Torchbearer for diagnostics, the Ultimate Paperwork Shredder for administration, and the Empathic Consultant for patient interaction, through vivid real-time transcripts of GPT-4 interactions, including a complex newborn case in which the model correctly surfaces a rare 11-beta-hydroxylase deficiency. Writing from the perspective of a PhD student specializing in AI and healthcare, this review finds their vision compelling yet argues it requires significant scrutiny regarding implementation, equity, bias, evaluation standards, and safety, drawing on information-policy frameworks such as Lessig's code is law and Spinello's cyberethics, and noting emerging evidence that real-world deployments may be messier than the authors' optimistic projections.",
-    "pdf": "Review_of_The_AI_Revolution_in_Medicine_GPT-4_and_Beyond.pdf",
-    "venue": "Book Review (Available at SSRN 6456520)"
+    "date": "2026-04-10",
+    "abstract": "Predicting post-surgical seizure outcomes in pharmacoresistant epilepsy is a clinical challenge. Conventional deep-learning approaches operate on static, single-timepoint pre-operative scans, omitting longitudinal morphological changes. We propose Neuro-Oracle, a three-stage framework that: (i) distils pre-to-post-operative MRI changes into a compact 512-dimensional trajectory vector using a 3D Siamese contrastive encoder; (ii) retrieves historically similar surgical trajectories from a population archive via nearest-neighbour search; and (iii) synthesises a natural-language prognosis grounded in the retrieved evidence using a quantized Llama-3-8B reasoning agent. Evaluations are conducted on the public EPISURG dataset (N = 268 longitudinally paired cases) using five-fold stratified cross-validation. Since ground-truth seizure-freedom scores are unavailable, we utilize a clinical proxy label based on the resection type. We acknowledge that the network representations may potentially learn the anatomical features of the resection cavities (i.e., temporal versus non-temporal locations) rather than true prognostic morphometry. Our current evaluation thus serves mainly as a proof-of-concept for the trajectory-aware retrieval architecture. Trajectory-based classifiers achieve AUC values between 0.834 and 0.905, compared with 0.793 for a single-timepoint ResNet-50 baseline. The Neuro-Oracle agent (M5) matches the AUC of purely discriminative trajectory classifiers (0.867) while producing structured justifications with zero observed hallucinations under our audit protocol. A Siamese Diversity Ensemble (M6) of trajectory-space classifiers attains an AUC of 0.905 without language-model overhead.",
+    "pdf": "Neuro-Oracle_A_Trajectory-Aware_Agentic_RAG_Framework_for_Interpretable_Epilepsy_Surgical_Prognosis.pdf",
+    "venue": "arXiv preprint arXiv:2604.14216"
   },
   {
     "title": "Evaluating Trustworthiness of LLMs for Contrail Detection via Ground-Based Cameras",
@@ -37,7 +28,7 @@
     "date": "2026-03-31",
     "abstract": "This project investigates the trustworthiness of frontier large language models (LLMs), specifically Gemini 3.1 Pro and Claude Opus 4.6, when deployed as research assistants within a real scientific workflow. Using contrail identification from ground-based visible cameras as an entry point, a domain relevant to aviation's climate impact where condensation trails are estimated to account for roughly 35% of aviation's total climate forcing, the study structures the workflow into three stages: a brief literature review generated by Gemini 3.1 Pro with mandatory verbatim source quotations for every factual claim; an experimental design proposed by Gemini 3.1 Pro for differentiating real contrails from optical glare in whole-sky imagery, including neural architecture selection and ADS-B data fusion; and an adversarial cross-model audit in which Claude Opus 4.6 independently reviews that design to surface technical pitfalls, physical impossibilities, and architectural biases. The work probes a central question in trustworthy AI, namely whether LLMs can serve as reliable collaborators in scientific research, and what safeguards are necessary to prevent confidently stated but technically flawed outputs from entering the research pipeline.",
     "pdf": "Evaluating_Trustworthiness_of_LLMs_for_Contrail_Detection_via_Ground-Based_Cameras.pdf",
-    "venue": "Research Project, The George Washington University"
+    "venue": "Trustworthy AI in Scientific Research (Course Assignment)"
   },
   {
     "title": "Soft-Label Governance for Distributional Safety in Multi-Agent Systems",
@@ -51,16 +42,6 @@
     "venue": "arXiv preprint arXiv:2604.19752 (under review)"
   },
   {
-    "title": "Mathematical Foundations of Trustworthy AI",
-    "authors": [
-      "Aizierjiang Aiersilan"
-    ],
-    "date": "2025-12-30",
-    "abstract": "When I was learning about Trustworthy AI, I found there were limited systematic books on its mathematical foundations, so I put together my notes taken during the early phase of my self-learning. In these notes, I provide a rigorous mathematical examination of Trustworthy AI, exploring reliable machine learning through the lens of constrained optimization, statistical learning theory, and differential geometry. I bring together concepts to define the multidimensional requirements of AI systems, moving beyond heuristic approaches toward a grounded engineering discipline. The notes formalize critical properties such as adversarial robustness via Lipschitz continuity and dual norms, algorithmic fairness via group constraints and impossibility theorems, and causal inference via structural causal models. Through these, I aim to provide a useful systematic mathematical foundation for better understanding Trustworthy AI.",
-    "pdf": "Mathematical_Foundations_of_Trustworthy_AI.pdf",
-    "venue": "Lecture Notes, Studies in Trustworthy AI (HAL: hal-05449393)"
-  },
-  {
     "title": "How Claude 4.5 Haiku Adapts Medical Facts Based on User Personas",
     "authors": [
       "Aizierjiang Aiersilan"
@@ -71,15 +52,14 @@
     "venue": "Trustworthy AI in Healthcare (Course Assignment); Selective Truthiness in LLMs"
   },
   {
-    "title": "Literature Review of AI-Driven Body Shape Analysis for Sarcopenia",
+    "title": "Review of The AI Revolution in Medicine: GPT-4 and Beyond",
     "authors": [
-      "Aizierjiang Aiersilan",
-      "James Hahn"
+      "Aizierjiang Aiersilan"
     ],
-    "date": "2025-11-28",
-    "abstract": "Sarcopenia, a debilitating skeletal muscle disorder fueling frailty, disability, and mortality in aging societies, is increasingly targeted by cutting-edge artificial intelligence (AI) for enhanced detection and evaluation. This comprehensive review spotlights AI-driven body shape analysis for sarcopenia, spanning medical imaging techniques (CT, MRI, DXA, ultrasound) and innovative 3D body surface scanning. Drawing from 962 publications across key databases (January 2015 to August 2025), our methodology incorporated search terms for medical imaging alongside 3D body shape, morphometry, and computer graphics. Strikingly, while encompassing these expansive terms, results underscore AI's heavy reliance on medical imaging, leaving 3D scanning as a promising yet untapped avenue for accessible, non-invasive screening. Studies chiefly leverage convolutional neural networks for precise muscle segmentation at L3, machine learning models (Random Forest, SVM, XGBoost) for risk forecasting, and deep learning for skeletal muscle index computation, aligned with standards like EWGSOP2 and AWGS 2019. Highlights include AI's prowess in boosting diagnostic accuracy via automated, consistent metrics and unlocking opportunistic screening from everyday scans. Yet, hurdles persist in data uniformity, inclusivity, model transparency, and real-world testing. Looking ahead, priorities encompass explainable AI for clarity, harnessing 3D body analysis for broader reach, and rigorous prospective studies for seamless clinical adoption. Setting this apart from static reviews, we introduce a dynamic companion website that auto-updates with fresh references daily; its open-source code serves as an adaptable template for other domains via simple keyword and scope configurations, while a fixed compilation of references from this review ensures perpetual currency.",
-    "pdf": "Literature_Review_of_AI-Driven_Body_Shape_Analysis_for_Sarcopenia.pdf",
-    "venue": "TechRxiv Preprint (Authorea)"
+    "date": "2026-02-13",
+    "abstract": "This review essay examines The AI Revolution in Medicine: GPT-4 and Beyond by Peter Lee, Carey Goldberg, and Isaac Kohane, an early and optimistic exploration of how general-purpose artificial intelligence might transform healthcare. The book's central thesis is that Large Language Models have evolved beyond simple search engines and predictive-text tools into systems capable of reasoning, empathy, and complex problem-solving, and that they will not replace physicians but form a symbiotic partnership with them. The authors illustrate three core roles for AI in medicine, namely the Torchbearer for diagnostics, the Ultimate Paperwork Shredder for administration, and the Empathic Consultant for patient interaction, through vivid real-time transcripts of GPT-4 interactions, including a complex newborn case in which the model correctly surfaces a rare 11-beta-hydroxylase deficiency. Writing from the perspective of a PhD student specializing in AI and healthcare, this review finds their vision compelling yet argues it requires significant scrutiny regarding implementation, equity, bias, evaluation standards, and safety, drawing on information-policy frameworks such as Lessig's code is law and Spinello's cyberethics, and noting emerging evidence that real-world deployments may be messier than the authors' optimistic projections.",
+    "pdf": "Review_of_The_AI_Revolution_in_Medicine_GPT-4_and_Beyond.pdf",
+    "venue": "Book Review (Available at SSRN 6456520)"
   },
   {
     "title": "The Vibe-Check Protocol: Quantifying Cognitive Offloading in AI Programming",
@@ -90,6 +70,16 @@
     "abstract": "The integration of Large Language Models (LLMs) into software engineering education has driven the emergence of Vibe Coding, a paradigm where developers articulate high-level intent through natural language and delegate implementation to AI agents. While proponents argue this approach modernizes pedagogy by emphasizing conceptual design over syntactic memorization, accumulating empirical evidence raises concerns regarding skill retention and deep conceptual understanding. This paper proposes a theoretical framework to investigate the research question: Is Vibe Coding a better way to learn software engineering? We posit a divergence in student outcomes between those leveraging AI for acceleration versus those using it for cognitive offloading. To evaluate these educational trade-offs, we propose the Vibe-Check Protocol (VCP), a systematic benchmarking framework incorporating three quantitative metrics: the Cold Start Refactor (M_CSR) for modeling skill decay; Hallucination Trap Detection (M_HT) based on signal detection theory to evaluate error identification; and the Explainability Gap (E_gap) for quantifying the divergence between code complexity and conceptual comprehension. Through controlled comparisons, VCP aims to provide a quantitative basis for educators to determine the optimal pedagogical boundary: identifying contexts where Vibe Coding fosters genuine mastery and contexts where it introduces hidden technical debt and superficial competence.",
     "pdf": "The_Vibe-Check_Protocol_Quantifying_Cognitive_Offloading_in_AI_Programming.pdf",
     "venue": "arXiv preprint arXiv:2601.02410"
+  },
+  {
+    "title": "Mathematical Foundations of Trustworthy AI",
+    "authors": [
+      "Aizierjiang Aiersilan"
+    ],
+    "date": "2025-12-30",
+    "abstract": "When I was learning about Trustworthy AI, I found there were limited systematic books on its mathematical foundations, so I put together my notes taken during the early phase of my self-learning. In these notes, I provide a rigorous mathematical examination of Trustworthy AI, exploring reliable machine learning through the lens of constrained optimization, statistical learning theory, and differential geometry. I bring together concepts to define the multidimensional requirements of AI systems, moving beyond heuristic approaches toward a grounded engineering discipline. The notes formalize critical properties such as adversarial robustness via Lipschitz continuity and dual norms, algorithmic fairness via group constraints and impossibility theorems, and causal inference via structural causal models. Through these, I aim to provide a useful systematic mathematical foundation for better understanding Trustworthy AI.",
+    "pdf": "Mathematical_Foundations_of_Trustworthy_AI.pdf",
+    "venue": "Lecture Notes, Studies in Trustworthy AI (HAL: hal-05449393)"
   },
   {
     "title": "Representations of 3D Rotations: Mathematical Foundations and Comparative Analysis",
@@ -104,15 +94,25 @@
     "venue": "arXiv preprint arXiv:2605.08086"
   },
   {
-    "title": "A 3D Framework for Improving Low-Latency Multi-Channel Live Streaming",
+    "title": "Literature Review of AI-Driven Body Shape Analysis for Sarcopenia",
     "authors": [
       "Aizierjiang Aiersilan",
-      "Zhiqiang Wang"
+      "James Hahn"
     ],
-    "date": "2021-10-20",
-    "abstract": "The advent of 5G has driven the demand for high-quality, low-latency live streaming. However, challenges such as managing the increased data volume, ensuring synchronization across multiple streams, and maintaining consistent quality under varying network conditions persist, particularly in real-time video streaming. To address these issues, we propose a novel framework that leverages 3D virtual environments within game engines (e.g., Unity 3D) to optimize multi-channel live streaming. Our approach consolidates multi-camera video data into a single stream using multiple virtual 3D canvases, significantly increasing channel amounts while reducing latency and enhancing user flexibility. For demonstration of our approach, we utilize the Unity 3D engine to integrate multiple video inputs into a single-channel stream, supporting one-to-many broadcasting, one-to-one video calling, and real-time control of video channels. By mapping video data onto a world-space canvas and capturing it via an in-world camera, we minimize redundant data transmission, achieving efficient, low-latency streaming. Our results demonstrate that this method outperforms some existing multi-channel live streaming solutions in both latency reduction and user interaction responsiveness improvement.",
-    "pdf": "A_3D_Framework_for_Improving_Low_Latency_Multi_Channel_Live_Streaming.pdf",
-    "venue": "2025 IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2025)"
+    "date": "2025-11-28",
+    "abstract": "Sarcopenia, a debilitating skeletal muscle disorder fueling frailty, disability, and mortality in aging societies, is increasingly targeted by cutting-edge artificial intelligence (AI) for enhanced detection and evaluation. This comprehensive review spotlights AI-driven body shape analysis for sarcopenia, spanning medical imaging techniques (CT, MRI, DXA, ultrasound) and innovative 3D body surface scanning. Drawing from 962 publications across key databases (January 2015 to August 2025), our methodology incorporated search terms for medical imaging alongside 3D body shape, morphometry, and computer graphics. Strikingly, while encompassing these expansive terms, results underscore AI's heavy reliance on medical imaging, leaving 3D scanning as a promising yet untapped avenue for accessible, non-invasive screening. Studies chiefly leverage convolutional neural networks for precise muscle segmentation at L3, machine learning models (Random Forest, SVM, XGBoost) for risk forecasting, and deep learning for skeletal muscle index computation, aligned with standards like EWGSOP2 and AWGS 2019. Highlights include AI's prowess in boosting diagnostic accuracy via automated, consistent metrics and unlocking opportunistic screening from everyday scans. Yet, hurdles persist in data uniformity, inclusivity, model transparency, and real-world testing. Looking ahead, priorities encompass explainable AI for clarity, harnessing 3D body analysis for broader reach, and rigorous prospective studies for seamless clinical adoption. Setting this apart from static reviews, we introduce a dynamic companion website that auto-updates with fresh references daily; its open-source code serves as an adaptable template for other domains via simple keyword and scope configurations, while a fixed compilation of references from this review ensures perpetual currency.",
+    "pdf": "Literature_Review_of_AI-Driven_Body_Shape_Analysis_for_Sarcopenia.pdf",
+    "venue": "TechRxiv Preprint (Authorea)"
+  },
+  {
+    "title": "Hallucination Is Linearly Decodable from Mid-Layer Hidden States in Quantized LLMs",
+    "authors": [
+      "Aizierjiang Aiersilan"
+    ],
+    "date": "2025-02-11",
+    "abstract": "We investigate whether open-source LLMs encode a linearly separable truthfulness signal in their hidden states, and at which network depth this signal is strongest. Across three 7B-8B instruction-tuned models (Llama-3.1-8B, Mistral-7B, Qwen2.5-7B) loaded in 4-bit NF4 quantization, we extract per-layer hidden states on four hallucination benchmarks (TruthfulQA, HaluEval-QA, FEVER, and a controlled synthetic set) and compare four detection approaches: linear and MLP probes, INSIDE EigenScore, self-consistency, and attention entropy. A linear probe on a single mid-network layer achieves 0.904-1.000 AUROC on held-out splits, while sampling-based detectors do not exceed 0.541 AUROC under the same protocol. The truthfulness signal is approximately linear: MLP probes rarely surpass linear probes by more than 0.01 AUROC. Peak probing layers fall in a consistent band across model families on natural-language benchmarks-blocks 13-18 of 32 for Llama and Mistral, and blocks 19-25 of 28 for Qwen. First-block attention entropy provides a complementary signal in knowledge-grounded settings (0.866-0.941 AUROC on HaluEval-QA) at no additional inference cost. The low discriminability of sampling methods under this protocol reflects a structural mismatch between paired-label evaluation and the information these methods access, rather than an inherent limitation of those methods. Code and data are released for full reproducibility on a single 8 GB GPU.",
+    "pdf": "Hallucination_Is_Linearly_Decodable_from_Mid-Layer_Hidden_States_in_Quantized_LLMs.pdf",
+    "venue": "arXiv preprint arXiv:2606.02628"
   },
   {
     "title": "LLM-Enhanced Traffic Editor for Accelerated Testing of Autonomous Vehicles under Various Pedestrian Behaviors",
@@ -142,16 +142,6 @@
     "lastpage": "14547"
   },
   {
-    "title": "Design and Implementation of Online Live Streaming System Using A 3D Engine",
-    "authors": [
-      "Aizierjiang Aiersilan"
-    ],
-    "date": "2021-05-17",
-    "abstract": "With the growing demand for live video streaming, there is an increasing need for low-latency and high-quality transmission, especially with the advent of 5G networks. While 5G offers hardware-level improvements, effective software solutions for minimizing latency remain essential. Current methods, such as multi-channel streaming, fail to address latency issues fundamentally, often only adding new channels without optimizing overall performance. This thesis proposes a novel approach using a 3D engine (e.g., Unity 3D) to stream multi-input video data through a single channel with reduced latency. By leveraging 3D engine capabilities, such as World/Screen Space Cameras, 3D Canvases, and Webcam Textures, the proposed system consolidates video streams from multiple external cameras into a unified, low-latency output. The affiliated project of this thesis demonstrates the implementation of a low-latency multi-channel live video streaming system. It employs the RTSP protocol and examines video encoding techniques, alongside a client-side application based on Unity 3D. The system architecture includes a WebSocket server for persistent connections, an HTTP server for communication, a MySQL database for storage, Redis for caching, and Nginx for load balancing. Each module operates independently, ensuring flexibility and scalability in the system's design. A key innovation of this system is its use of a 3D scene to map multiple video inputs onto a virtual canvas, recorded by an in-engine camera for transmission. This design minimizes redundant data, enabling an efficient and director-guided live streaming network. The thesis concludes by discussing challenges encountered during the project and provides solutions for future improvement.",
-    "pdf": "Design_and_Implementation_of_Online_Live_Streaming_System_Using_A_3D_Engine.pdf",
-    "venue": "arXiv preprint arXiv:2409.06207 (Bachelor's Thesis, translated)"
-  },
-  {
     "title": "Literature Review of Mixed Reality Research",
     "authors": [
       "Aizierjiang Aiersilan"
@@ -160,5 +150,26 @@
     "abstract": "In the global context, while mixed reality has been an emerging concept for years, recent technological and scientific advancements have now made it poised to revolutionize industries and daily life by offering enhanced functionalities and improved services. Besides reviewing the highly cited papers in the last 20 years among over a thousand research papers on mixed reality, this systematic review provides the state-of-the-art applications and utilities of the mixed reality by primarily scrutinizing the associated papers in 2022 and 2023. Focusing on the potentials that this technology have in providing digitally supported simulations and other utilities in the era of large language models, highlighting the potential and limitations of the innovative solutions and also bringing focus to emerging research directions, such as telemedicine, remote control and optimization of direct volume rendering. The paper's associated repository is publicly accessible at https://aizierjiang.github.io/mr.",
     "pdf": "Literature_Review_of_Mixed_Reality_Research.pdf",
     "venue": "SHS Web of Conferences, Vol. 187, 03031 (2nd International Conference on Educational Science and Social Culture, ESSC 2023)"
+  },
+  {
+    "title": "A 3D Framework for Improving Low-Latency Multi-Channel Live Streaming",
+    "authors": [
+      "Aizierjiang Aiersilan",
+      "Zhiqiang Wang"
+    ],
+    "date": "2021-10-20",
+    "abstract": "The advent of 5G has driven the demand for high-quality, low-latency live streaming. However, challenges such as managing the increased data volume, ensuring synchronization across multiple streams, and maintaining consistent quality under varying network conditions persist, particularly in real-time video streaming. To address these issues, we propose a novel framework that leverages 3D virtual environments within game engines (e.g., Unity 3D) to optimize multi-channel live streaming. Our approach consolidates multi-camera video data into a single stream using multiple virtual 3D canvases, significantly increasing channel amounts while reducing latency and enhancing user flexibility. For demonstration of our approach, we utilize the Unity 3D engine to integrate multiple video inputs into a single-channel stream, supporting one-to-many broadcasting, one-to-one video calling, and real-time control of video channels. By mapping video data onto a world-space canvas and capturing it via an in-world camera, we minimize redundant data transmission, achieving efficient, low-latency streaming. Our results demonstrate that this method outperforms some existing multi-channel live streaming solutions in both latency reduction and user interaction responsiveness improvement.",
+    "pdf": "A_3D_Framework_for_Improving_Low_Latency_Multi_Channel_Live_Streaming.pdf",
+    "venue": "2025 IEEE International Conference on Multimedia and Expo Workshops (ICMEW 2025)"
+  },
+  {
+    "title": "Design and Implementation of Online Live Streaming System Using A 3D Engine",
+    "authors": [
+      "Aizierjiang Aiersilan"
+    ],
+    "date": "2021-05-17",
+    "abstract": "With the growing demand for live video streaming, there is an increasing need for low-latency and high-quality transmission, especially with the advent of 5G networks. While 5G offers hardware-level improvements, effective software solutions for minimizing latency remain essential. Current methods, such as multi-channel streaming, fail to address latency issues fundamentally, often only adding new channels without optimizing overall performance. This thesis proposes a novel approach using a 3D engine (e.g., Unity 3D) to stream multi-input video data through a single channel with reduced latency. By leveraging 3D engine capabilities, such as World/Screen Space Cameras, 3D Canvases, and Webcam Textures, the proposed system consolidates video streams from multiple external cameras into a unified, low-latency output. The affiliated project of this thesis demonstrates the implementation of a low-latency multi-channel live video streaming system. It employs the RTSP protocol and examines video encoding techniques, alongside a client-side application based on Unity 3D. The system architecture includes a WebSocket server for persistent connections, an HTTP server for communication, a MySQL database for storage, Redis for caching, and Nginx for load balancing. Each module operates independently, ensuring flexibility and scalability in the system's design. A key innovation of this system is its use of a 3D scene to map multiple video inputs onto a virtual canvas, recorded by an in-engine camera for transmission. This design minimizes redundant data, enabling an efficient and director-guided live streaming network. The thesis concludes by discussing challenges encountered during the project and provides solutions for future improvement.",
+    "pdf": "Design_and_Implementation_of_Online_Live_Streaming_System_Using_A_3D_Engine.pdf",
+    "venue": "arXiv preprint arXiv:2409.06207 (Bachelor's Thesis, translated)"
   }
 ]

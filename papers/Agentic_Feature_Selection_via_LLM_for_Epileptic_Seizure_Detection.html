@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agentic Feature Selection via LLM for Epileptic Seizure Detection</title>
+  
+  <meta name="citation_title" content="Agentic Feature Selection via LLM for Epileptic Seizure Detection">
+  <meta name="citation_author" content="Aizierjiang Aiersilan">
+  <meta name="citation_author" content="Xiaodong Qu">
+  <meta name="citation_publication_date" content="2026/05/25">
+  <meta name="citation_journal_title" content="ACL BioNLP 2026">
+
+  <meta name="citation_pdf_url" content="https://researcharchive.github.io/pdfs/Agentic_Feature_Selection_via_LLM_for_Epileptic_Seizure_Detection.pdf">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #34495e;
+    }
+    h3 {
+      color: #3498db;
+      margin-top: 30px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
+    .bib-block {
+      background-color: #ecf0f1;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .bib-content {
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      margin: 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .copy-btn:hover {
+      background-color: #c0392b;
+    }
+    .copy-hint {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      background-color: #27ae60;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Agentic Feature Selection via LLM for Epileptic Seizure Detection</h1>
+  <h2>Authors: Aizierjiang Aiersilan, Xiaodong Qu</h2>
+  <h3>Abstract</h3>
+  <p>
+    Automated epileptic seizure detection from electroencephalography (EEG) signals is a clinically important task in which feature selection is typically performed using purely statistical criteria. We investigate whether a small instruction-tuned large language model (LLM) can guide iterative feature selection for binary seizure detection on the Epileptic Seizure Recognition dataset (11,500 samples, 178 features). The LLM agent (Qwen2.5-1.5B-Instruct) receives five complementary statistical summaries and selects a feature subset through multi-round reasoning. The agent achieves 96.5% accuracy and 0.911 F1 with 40 features, compared to 97.9% accuracy and 0.946 F1 for the best full-feature baseline (SVM-RBF on 178 features). Critically, 39 of the agent's 40 features coincide with the top-39 mutual-information features, and a deterministic Top-39 MI filter, evaluated by the same Random Forest classifier, attains the same 96.5% accuracy and 0.911 F1. We therefore present this work as an empirical baseline: at the 1.5B-parameter scale, the LLM behaves close to a univariate MI ranker. We situate the result against the recent LLM-based feature selection literature and enumerate the ablations and multi-dataset extensions required to determine whether larger or domain-specialized LLMs add value beyond statistical filtering.
+  </p>
+  
+  <a href="../pdfs/Agentic_Feature_Selection_via_LLM_for_Epileptic_Seizure_Detection.pdf" class="download-btn">Download Full PDF</a>
+
+  <h3>Bibliographic Reference</h3>
+  <div class="bib-block">
+    <button class="copy-btn" onclick="copyBib()">Copy</button>
+    <div class="copy-hint" id="copyHint">Copied successfully!</div>
+    <pre class="bib-content">@inproceedings{aiersilan2026agentic,
+  title={Agentic Feature Selection via LLM for Epileptic Seizure Detection},
+  author={Aiersilan, Aizierjiang and Qu, Xiaodong},
+  booktitle={BioNLP 2026},
+  pages={64--74},
+  year={2026}
+}</pre>
+  </div>
+
+  <script>
+    function copyBib() {
+      const bibText = document.querySelector('.bib-content').textContent;
+      navigator.clipboard.writeText(bibText).then(() => {
+        const hint = document.getElementById('copyHint');
+        hint.style.display = 'block';
+        setTimeout(() => {
+          hint.style.display = 'none';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

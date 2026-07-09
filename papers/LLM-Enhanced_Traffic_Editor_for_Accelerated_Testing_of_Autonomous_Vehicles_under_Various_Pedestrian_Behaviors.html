@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM-Enhanced Traffic Editor for Accelerated Testing of Autonomous Vehicles under Various Pedestrian Behaviors</title>
+  
+  <meta name="citation_title" content="LLM-Enhanced Traffic Editor for Accelerated Testing of Autonomous Vehicles under Various Pedestrian Behaviors">
+  <meta name="citation_author" content="Aizierjiang Aiersilan">
+  <meta name="citation_author" content="Mingzhe Liu">
+  <meta name="citation_publication_date" content="2024/10/23">
+  <meta name="citation_journal_title" content="International Conference on Smart Transportation and City Engineering (STCE 2024)">
+  <meta name="citation_volume" content="13575">
+  <meta name="citation_firstpage" content="135753R">
+
+  <meta name="citation_pdf_url" content="https://researcharchive.github.io/pdfs/LLM-Enhanced_Traffic_Editor_for_Accelerated_Testing_of_Autonomous_Vehicles_under_Various_Pedestrian_Behaviors.pdf">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #34495e;
+    }
+    h3 {
+      color: #3498db;
+      margin-top: 30px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
+    .bib-block {
+      background-color: #ecf0f1;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .bib-content {
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      margin: 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .copy-btn:hover {
+      background-color: #c0392b;
+    }
+    .copy-hint {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      background-color: #27ae60;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>LLM-Enhanced Traffic Editor for Accelerated Testing of Autonomous Vehicles under Various Pedestrian Behaviors</h1>
+  <h2>Authors: Aizierjiang Aiersilan, Mingzhe Liu</h2>
+  <h3>Abstract</h3>
+  <p>
+    Achieving diverse pedestrian behaviors in traffic simulation is crucial for enhancing the realism and complexity necessary for autonomous vehicle (AV) testing. Human drivers adjust behavior based on context, balancing caution with errors that may contribute to accidents. Real-world scenarios such as congestion, overtaking, lane changes, and interactions between human-driven and AVs often create adversarial conditions that challenge autonomous driving (AD), especially in heterogeneous and densely populated environments. While recent studies have advanced AV capabilities in perception, risk assessment, adaptive control, and decision-making, a significant gap remains in the realistic and context-sensitive simulation of pedestrian behaviors, particularly in pedestrian-dense settings. To address this, we propose a large language model (LLM)-enhanced traffic editing strategy that dynamically configures diverse pedestrian behaviors in AD simulations. By harnessing the generative and interpretive capacities of LLMs, our approach facilitates real-time, prompt-based customization of pedestrian scenarios, thereby enhancing the adaptability and complexity of simulations. Broadly compatible with existing simulators, this strategy elevates the rigor of AV testing. Experimental results in CARLA and Udacity simulators indicate that AVs tested in LLM-enhanced environments demonstrate higher collision rates under autopilot compared to default scenarios, highlighting the increased realism and adversarial conditions introduced. Once implemented, the approach manages pedestrian behaviors through the LLM, substantially improving the efficiency of handling complex traffic patterns and fostering robust AD testing. The primary source code of this project is publicly available at https://aizierjiang.github.io/LLM4TrafficEditor.
+  </p>
+  
+  <a href="../pdfs/LLM-Enhanced_Traffic_Editor_for_Accelerated_Testing_of_Autonomous_Vehicles_under_Various_Pedestrian_Behaviors.pdf" class="download-btn">Download Full PDF</a>
+
+  <h3>Bibliographic Reference</h3>
+  <div class="bib-block">
+    <button class="copy-btn" onclick="copyBib()">Copy</button>
+    <div class="copy-hint" id="copyHint">Copied successfully!</div>
+    <pre class="bib-content">@inproceedings{aiersilan2025llmenhanced,
+  title={LLM-Enhanced Traffic Editor for Accelerated Testing of Autonomous Vehicles under Various Pedestrian Behaviors},
+  author={Aiersilan, Aizierjiang and Liu, Mingzhe},
+  booktitle={International Conference on Smart Transportation and City Engineering (STCE 2024)},
+  volume={13575},
+  pages={135753R},
+  year={2025},
+  organization={SPIE}
+}</pre>
+  </div>
+
+  <script>
+    function copyBib() {
+      const bibText = document.querySelector('.bib-content').textContent;
+      navigator.clipboard.writeText(bibText).then(() => {
+        const hint = document.getElementById('copyHint');
+        hint.style.display = 'block';
+        setTimeout(() => {
+          hint.style.display = 'none';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

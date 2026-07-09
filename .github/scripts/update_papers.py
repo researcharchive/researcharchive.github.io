@@ -6,7 +6,9 @@ from pathlib import Path
 def generate_html(paper, base_name):
     title = paper['title']
     authors = paper['authors']
-    date = paper['date'].replace('-', '/')  # YYYY/MM/DD
+    # YYYY/MM/DD, zero-padded for Google Scholar (tolerates non-padded input like 2025-7-13)
+    parts = paper['date'].split('-')
+    date = '/'.join([parts[0]] + [p.zfill(2) for p in parts[1:]])
     abstract = paper['abstract']
     pdf_url = f"https://researcharchive.github.io/pdfs/{paper['pdf']}"
     venue = paper['venue']

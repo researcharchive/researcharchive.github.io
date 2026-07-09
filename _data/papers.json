@@ -1,5 +1,16 @@
 [
   {
+    "title": "Agentic Feature Selection via LLM for Epileptic Seizure Detection",
+    "authors": [
+      "Aizierjiang Aiersilan",
+      "Xiaodong Qu"
+    ],
+    "date": "2026-05-25",
+    "abstract": "Automated epileptic seizure detection from electroencephalography (EEG) signals is a clinically important task in which feature selection is typically performed using purely statistical criteria. We investigate whether a small instruction-tuned large language model (LLM) can guide iterative feature selection for binary seizure detection on the Epileptic Seizure Recognition dataset (11,500 samples, 178 features). The LLM agent (Qwen2.5-1.5B-Instruct) receives five complementary statistical summaries and selects a feature subset through multi-round reasoning. The agent achieves 96.5% accuracy and 0.911 F1 with 40 features, compared to 97.9% accuracy and 0.946 F1 for the best full-feature baseline (SVM-RBF on 178 features). Critically, 39 of the agent's 40 features coincide with the top-39 mutual-information features, and a deterministic Top-39 MI filter, evaluated by the same Random Forest classifier, attains the same 96.5% accuracy and 0.911 F1. We therefore present this work as an empirical baseline: at the 1.5B-parameter scale, the LLM behaves close to a univariate MI ranker. We situate the result against the recent LLM-based feature selection literature and enumerate the ablations and multi-dataset extensions required to determine whether larger or domain-specialized LLMs add value beyond statistical filtering.",
+    "pdf": "Agentic_Feature_Selection_via_LLM_for_Epileptic_Seizure_Detection.pdf",
+    "venue": "ACL BioNLP 2026"
+  },
+  {
     "title": "Detecting Verbatim LLM Copy-Paste in Homework",
     "authors": [
       "Aizierjiang Aiersilan"
@@ -10,6 +21,27 @@
     "venue": "arXiv preprint arXiv:2605.16336"
   },
   {
+    "title": "Training-Free Adaptive 360-degree Video Streaming via Semantic Potential Fields",
+    "authors": [
+      "Aizierjiang Aiersilan",
+      "Zhangfei Yang"
+    ],
+    "date": "2026-04-27",
+    "abstract": "Adaptive 360° video streaming for teleoperation faces two coupled challenges: viewport prediction under uncertain gaze patterns and bitrate adaptation over fluctuating wireless channels. While Deep Reinforcement Learning (DRL) methods achieve high Quality of Experience (QoE), their lack of interpretability and dependence on offline training limit deployment in safety-critical systems. We propose OrbitStream, a training-free framework that formulates viewport prediction as a Gravitational Viewport Prediction (GVP) problem, where semantic objects generate potential fields that attract operator gaze, and employs a Saturation-Based Proportional-Derivative (PD) Controller for buffer regulation. On object-rich teleoperation traces, OrbitStream achieves 94.7% zero-shot viewport prediction accuracy without user-specific profiling, approaching trajectory-extrapolation baselines (~98.5%). Across 3,600 Monte Carlo simulations, it ranks second among 12 algorithms (QoE 2.71 vs. BOLA-E's 2.80), outperforming FastMPC (1.84), with 1.01 ms decision latency and minimal rebuffering.",
+    "pdf": "Training-Free_Adaptive_360-degree_Video_Streaming_via_Semantic_Potential-Fields.pdf",
+    "venue": "The 35th International Conference on Computer Communications and Networks (ICCCN 2026)"
+  },
+  {
+    "title": "Algorithmic Authority and the Clinical Standard of Care",
+    "authors": [
+      "Aizierjiang Aiersilan"
+    ],
+    "date": "2026-04-11",
+    "abstract": "The integration of artificial intelligence into clinical medicine creates a fundamental tension between algorithmic probabilistic reasoning and the experiential intuition of expert physicians; applying Lawrence Lessig's `Code is Law` framework, I argue that the architecture of clinical AI systems already functions as de facto medical regulation, reshaping liability and the standard of care. Reframing AI `hallucination` as structurally analogous to well-documented human cognitive failures such as confirmation bias and premature diagnostic closure, I show that both failure modes demand a unified governance response. I therefore propose a dialectical standard of care that treats the integrated AI-physician dyad as the singular responsible diagnostic entity, mandating the synthesis of algorithmic precision with human interpretive authority within robust data governance and patient privacy frameworks.",
+    "pdf": "Algorithmic_Authority_and_the_Clinical_Standard_of_Care.pdf",
+    "venue": "arXiv preprint arXiv:2606.00044"
+  },
+  {
     "title": "Soft-Label Governance for Distributional Safety in Multi-Agent Systems",
     "authors": [
       "Aizierjiang Aiersilan",
@@ -18,7 +50,7 @@
     "date": "2026-03-15",
     "abstract": "Multi-agent AI systems exhibit emergent risks that no single agent produces in isolation. Existing safety frameworks rely on binary classifications of agent behavior, discarding the uncertainty inherent in proxy-based evaluation. We introduce SWARM (System-Wide Assessment of Risk in Multi-agent systems), a simulation framework that replaces binary good/bad labels with soft probabilistic labels p = P(v = +1) in [0, 1], enabling continuous-valued payoff computation, toxicity measurement, and governance intervention. SWARM implements a modular governance engine with configurable levers (transaction taxes, circuit breakers, reputation decay, and random audits) and quantifies their effects through probabilistic metrics including expected toxicity E[1 - p | accepted] and quality gap E[p | accepted] - E[p | rejected]. Across seven scenarios with five-seed replication, we observe that strict governance reduces welfare by over 40% without improving safety. In parallel, aggressively internalizing system externalities collapses total welfare from a baseline of +262 down to -67, while toxicity remains invariant. Similarly, circuit breakers require careful calibration; overly restrictive thresholds severely diminish system value, whereas an optimal threshold balances moderate welfare with minimized toxicity. In companion experiments, we demonstrate that soft metrics can detect proxy gaming by self-optimizing agents that pass conventional binary evaluations. Furthermore, we observe that this basic governance layer can be applied to live LLM-backed agents (Concordia entities, Claude, GPT-4o Mini) without architectural modification. These results demonstrate that distributional safety requires continuous risk metrics and that governance lever calibration involves quantifiable tradeoffs between safety and system welfare. The source code of the framework and all project resources are publicly available at swarm-ai.org.",
     "pdf": "Soft-Label_Governance_for_Distributional_Safety_in_Multi-Agent_Systems.pdf",
-    "venue": "arXiv preprint arXiv:2604.19752 (under review)"
+    "venue": "arXiv preprint arXiv:2604.19752"
   },
   {
     "title": "Evaluating Trustworthiness of LLMs for Contrail Detection via Ground-Based Cameras",
@@ -38,7 +70,7 @@
     "date": "2026-02-25",
     "abstract": "In this paper, the phenomenon of selective truthiness in large language models has been investigated with Claude 4.5 Haiku to assess whether objective medical facts are distorted or omitted according to perceived user personas. Claude 4.5 Haiku has been evaluated on four clinical chest radiology questions across 11 distinct personas varying by user expertise, emotional state, and stated intent. Claude 4.6 Sonnet has served as automated evaluator of 264 responses, extracting metrics of key fact coverage, information withheld rates, and paternalism scores. Results show user emotional state, specifically anxiety, drives factual variation far more than expertise level. Vulnerable personas such as anxious parents have received key fact coverage of 76.3% and withheld information rates of 58.3%, both significantly worse than for demanding users, revealing a harmful trend of epistemic paternalism. A fact-anchor design principle has been stated requiring models to explicitly list core facts before drafting tone-adapted responses.",
     "pdf": "How_Claude_4_5_Haiku_Adapts_Medical_Facts_Based_on_User_Personas.pdf",
-    "venue": "Trustworthy AI in Healthcare (Course Assignment); Selective Truthiness in LLMs"
+    "venue": "Selective Truthiness in LLMs (Course Assignment)"
   },
   {
     "title": "Review of The AI Revolution in Medicine: GPT-4 and Beyond",
@@ -90,7 +122,7 @@
     "date": "2025-11-28",
     "abstract": "Sarcopenia, a debilitating skeletal muscle disorder fueling frailty, disability, and mortality in aging societies, is increasingly targeted by cutting-edge artificial intelligence (AI) for enhanced detection and evaluation. This comprehensive review spotlights AI-driven body shape analysis for sarcopenia, spanning medical imaging techniques (CT, MRI, DXA, ultrasound) and innovative 3D body surface scanning. Drawing from 962 publications across key databases (January 2015 to August 2025), our methodology incorporated search terms for medical imaging alongside 3D body shape, morphometry, and computer graphics. Strikingly, while encompassing these expansive terms, results underscore AI's heavy reliance on medical imaging, leaving 3D scanning as a promising yet untapped avenue for accessible, non-invasive screening. Studies chiefly leverage convolutional neural networks for precise muscle segmentation at L3, machine learning models (Random Forest, SVM, XGBoost) for risk forecasting, and deep learning for skeletal muscle index computation, aligned with standards like EWGSOP2 and AWGS 2019. Highlights include AI's prowess in boosting diagnostic accuracy via automated, consistent metrics and unlocking opportunistic screening from everyday scans. Yet, hurdles persist in data uniformity, inclusivity, model transparency, and real-world testing. Looking ahead, priorities encompass explainable AI for clarity, harnessing 3D body analysis for broader reach, and rigorous prospective studies for seamless clinical adoption. Setting this apart from static reviews, we introduce a dynamic companion website that auto-updates with fresh references daily; its open-source code serves as an adaptable template for other domains via simple keyword and scope configurations, while a fixed compilation of references from this review ensures perpetual currency.",
     "pdf": "Literature_Review_of_AI-Driven_Body_Shape_Analysis_for_Sarcopenia.pdf",
-    "venue": "TechRxiv Preprint (Authorea)"
+    "venue": "TechRxiv Preprint (Authorea) - Journal Submission"
   },
   {
     "title": "Representations of 3D Rotations: Mathematical Foundations and Comparative Analysis",
@@ -103,6 +135,18 @@
     "abstract": "Rotation representations are foundational in fields such as computer graphics, robotics, and machine learning, where precise and efficient modeling of 3D orientations is critical. This paper comprehensively investigates diverse representations of the special orthogonal group SO(3), such as Euler angles, axis-angle vectors, quaternions, rotation matrices, exponential maps, and emerging continuous and probabilistic methods, evaluating their mathematical formulations, continuity, susceptibility to gimbal lock, computational efficiency, storage requirements, interpolation properties, and composition operations, while integrating detailed algebraic insights with practical applications in fields like animation, pose estimation, inertial navigation, 3D shape registration, and neural networks. Empirical evidence highlights quaternions' dominance due to their compactness and computational efficiency, while alternatives like 6D continuous representations and matrix Fisher distributions provide enhanced continuity and uncertainty modeling. Future research could explore hybrid methods and thorough large-scale evaluations to help build a solid foundation for improving rotation representation techniques.",
     "pdf": "Representations_of_3D_Rotations_Mathematical_Foundations_and_Comparative_Analysis.pdf",
     "venue": "arXiv preprint arXiv:2605.08086"
+  },
+  {
+    "title": "DeFi Intent Discovery via Maximum Entropy Inverse Reinforcement Learning",
+    "authors": [
+      "Aizierjiang Aiersilan",
+      "Jerome Yen",
+      "Sheng Wang"
+    ],
+    "date": "2025-7-13",
+    "abstract": "Decentralized Finance (DeFi) transaction sequences can obscure a user’s high-level goal behind multi-step smart-contract calls, routing abstractions, and rapidly changing market conditions. Many prior intent-mining pipelines rely on transaction-level semantic labels, which can miss the sequential decision structure of long-horizon strategies. We formulate DeFi intent discovery as sequential reward inference and learn a parametric reward Rθ(s, a) from expert demonstrations via Maximum Entropy Inverse Reinforcement Learning (MaxEnt IRL). To capture short-horizon market trends under volatility and partial observability, we augment the state with a temporal market-gradient term ∇t m, defined as the block-to-block finite difference of market-state variables. We refer to this state design as Chemo-IRL. To enable controlled synthetic evaluation under intent hiding, we introduce Gym-DeFi, a Gymnasium-compatible simulator with a configurable action-obfuscation channel that corrupts observed action identifiers during data generation. We evaluate reward recovery using Reward Recovery Error (RRE) and downstream intent probing using macro-F1 from a fixed post-hoc attribution-based decoder. On this controlled synthetic benchmark under high obfuscation, Chemo-IRL attains the lowest RRE among intent-label-free baselines while remaining competitive on macro-F1 within the same label-free setting. These results should be interpreted as benchmark-level comparisons in a controlled synthetic environment rather than as direct evidence of real-world DeFi deployment performance.",
+    "pdf": "DeFi_Intent_Discovery_via_Maximum_Entropy_Inverse_Reinforcement_Learning.pdf",
+    "venue": "2026 International Joint Conference on Neural Networks (IJCNN 2026)"
   },
   {
     "title": "Hallucination Is Linearly Decodable from Mid-Layer Hidden States in Quantized LLMs",
@@ -123,7 +167,7 @@
     "date": "2024-10-23",
     "abstract": "Achieving diverse pedestrian behaviors in traffic simulation is crucial for enhancing the realism and complexity necessary for autonomous vehicle (AV) testing. Human drivers adjust behavior based on context, balancing caution with errors that may contribute to accidents. Real-world scenarios such as congestion, overtaking, lane changes, and interactions between human-driven and AVs often create adversarial conditions that challenge autonomous driving (AD), especially in heterogeneous and densely populated environments. While recent studies have advanced AV capabilities in perception, risk assessment, adaptive control, and decision-making, a significant gap remains in the realistic and context-sensitive simulation of pedestrian behaviors, particularly in pedestrian-dense settings. To address this, we propose a large language model (LLM)-enhanced traffic editing strategy that dynamically configures diverse pedestrian behaviors in AD simulations. By harnessing the generative and interpretive capacities of LLMs, our approach facilitates real-time, prompt-based customization of pedestrian scenarios, thereby enhancing the adaptability and complexity of simulations. Broadly compatible with existing simulators, this strategy elevates the rigor of AV testing. Experimental results in CARLA and Udacity simulators indicate that AVs tested in LLM-enhanced environments demonstrate higher collision rates under autopilot compared to default scenarios, highlighting the increased realism and adversarial conditions introduced. Once implemented, the approach manages pedestrian behaviors through the LLM, substantially improving the efficiency of handling complex traffic patterns and fostering robust AD testing. The primary source code of this project is publicly available at https://aizierjiang.github.io/LLM4TrafficEditor.",
     "pdf": "LLM-Enhanced_Traffic_Editor_for_Accelerated_Testing_of_Autonomous_Vehicles_under_Various_Pedestrian_Behaviors.pdf",
-    "venue": "International Conference on Smart Transportation and City Engineering (STCE 2024), Proc. SPIE Vol. 13575, 135753R",
+    "venue": "International Conference on Smart Transportation and City Engineering (STCE 2024)",
     "volume": "13575",
     "firstpage": "135753R"
   },
@@ -135,7 +179,7 @@
     "date": "2024-08-12",
     "abstract": "Motion planning is a crucial component in autonomous driving. State-of-the-art motion planners are trained on meticulously curated datasets, which are not only expensive to annotate but also insufficient in capturing rarely seen critical scenarios. Failing to account for such scenarios poses a significant risk to motion planners and may lead to incidents during testing. An intuitive solution is to manually compose such scenarios by programming and executing a simulator (e.g., CARLA). However, this approach incurs substantial human costs. Motivated by this, we propose an inexpensive method for generating diverse critical traffic scenarios to train more robust motion planners. First, we represent traffic scenarios as scripts, which are then used by the simulator to generate traffic scenarios. Next, we develop a method that accepts user-specified text descriptions, which a Large Language Model translates into scripts using in-context learning. The output scripts are sent to the simulator that produces the corresponding traffic scenarios. As our method can generate abundant safety-critical traffic scenarios, we use them as synthetic training data for motion planners. To demonstrate the value of generated scenarios, we train existing motion planners on our synthetic data, real-world datasets, and a combination of both. Our experiments show that motion planners trained with our data significantly outperform those trained solely on real-world data, showing the usefulness of our synthetic data and the effectiveness of our data generation method.",
     "pdf": "Generating_Traffic_Scenarios_via_In-Context_Learning_to_Learn_Better_Motion_Planner.pdf",
-    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI-25), Vol. 39, No. 14, pp. 14539-14547",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence (AAAI-25 Oral)",
     "volume": "39",
     "issue": "14",
     "firstpage": "14539",

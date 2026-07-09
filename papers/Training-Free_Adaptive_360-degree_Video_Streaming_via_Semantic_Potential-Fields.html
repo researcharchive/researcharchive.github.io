@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Training-Free Adaptive 360-degree Video Streaming via Semantic Potential Fields</title>
+  
+  <meta name="citation_title" content="Training-Free Adaptive 360-degree Video Streaming via Semantic Potential Fields">
+  <meta name="citation_author" content="Aizierjiang Aiersilan">
+  <meta name="citation_author" content="Zhangfei Yang">
+  <meta name="citation_publication_date" content="2026/04/27">
+  <meta name="citation_journal_title" content="The 35th International Conference on Computer Communications and Networks (ICCCN 2026)">
+
+  <meta name="citation_pdf_url" content="https://researcharchive.github.io/pdfs/Training-Free_Adaptive_360-degree_Video_Streaming_via_Semantic_Potential-Fields.pdf">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #34495e;
+    }
+    h3 {
+      color: #3498db;
+      margin-top: 30px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #2980b9;
+    }
+    .bib-block {
+      background-color: #ecf0f1;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .bib-content {
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      margin: 0;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .copy-btn:hover {
+      background-color: #c0392b;
+    }
+    .copy-hint {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      background-color: #27ae60;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Training-Free Adaptive 360-degree Video Streaming via Semantic Potential Fields</h1>
+  <h2>Authors: Aizierjiang Aiersilan, Zhangfei Yang</h2>
+  <h3>Abstract</h3>
+  <p>
+    Adaptive 360° video streaming for teleoperation faces two coupled challenges: viewport prediction under uncertain gaze patterns and bitrate adaptation over fluctuating wireless channels. While Deep Reinforcement Learning (DRL) methods achieve high Quality of Experience (QoE), their lack of interpretability and dependence on offline training limit deployment in safety-critical systems. We propose OrbitStream, a training-free framework that formulates viewport prediction as a Gravitational Viewport Prediction (GVP) problem, where semantic objects generate potential fields that attract operator gaze, and employs a Saturation-Based Proportional-Derivative (PD) Controller for buffer regulation. On object-rich teleoperation traces, OrbitStream achieves 94.7% zero-shot viewport prediction accuracy without user-specific profiling, approaching trajectory-extrapolation baselines (~98.5%). Across 3,600 Monte Carlo simulations, it ranks second among 12 algorithms (QoE 2.71 vs. BOLA-E's 2.80), outperforming FastMPC (1.84), with 1.01 ms decision latency and minimal rebuffering.
+  </p>
+  
+  <a href="../pdfs/Training-Free_Adaptive_360-degree_Video_Streaming_via_Semantic_Potential-Fields.pdf" class="download-btn">Download Full PDF</a>
+
+  <h3>Bibliographic Reference</h3>
+  <div class="bib-block">
+    <button class="copy-btn" onclick="copyBib()">Copy</button>
+    <div class="copy-hint" id="copyHint">Copied successfully!</div>
+    <pre class="bib-content">@inproceedings{aiersilan26orbitstream,
+  title={Training-Free Adaptive 360-degree Video Streaming via Semantic Potential Fields},
+  author={Aiersilan, Aizierjiang and Yang, Zhangfei},
+  booktitle={2026 35th International Conference on Computer Communications and Networks (ICCCN)},
+  pages={1--6},
+  year={2026},
+  organization={IEEE}
+}</pre>
+  </div>
+
+  <script>
+    function copyBib() {
+      const bibText = document.querySelector('.bib-content').textContent;
+      navigator.clipboard.writeText(bibText).then(() => {
+        const hint = document.getElementById('copyHint');
+        hint.style.display = 'block';
+        setTimeout(() => {
+          hint.style.display = 'none';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
